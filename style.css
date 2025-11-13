@@ -52,9 +52,9 @@
       background: #FFCC1A;
       transition: transform .28s ease, opacity .28s ease;
     }
-    .burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .burger.active span:nth-child(1) { transform: rotate(45deg) translate(9px,9px); }
     .burger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+    .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(9px,-9px); }
 
     /* le menu ouuuuu ?*/
     .menu {
@@ -92,8 +92,15 @@
     }
     .menu ul li a:hover { background: #FFCC1A; color: #1A1A18; transform: translateY(-3px); }
 
+.hero {
+  display: flex;
+  position: relative;
+}
 
-
+.hero .image_hero {
+  overflow: hidden;
+  position: relative;
+}
 
 
 /* Formulaire */
@@ -136,27 +143,16 @@ input, textarea {
   transition: border-color 0.3s;
 }
 
-input:focus, textarea:focus {
-  border-color: #007BFF;
-  outline: none;
-}
-
 button {
   align-self: center;
   padding: 12px 25px;
   border: none;
   border-radius: 8px;
-  background-color: #007BFF;
   color: white;
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s;
 }
-
-button:hover {
-  background-color: #0056b3;
-}
-
  
 
 /* Footer */
