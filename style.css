@@ -1,0 +1,314 @@
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body { height: 100%; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #1A1A18;
+      color: #fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding-top: 70px; 
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background: #1A1A18;
+      z-index: 1200;
+      border-bottom: 1px solid rgba(255,204,26,0.06);
+    }
+
+    .header .logo {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+
+    /* le burger du menu */
+    .burger {
+      width: 36px;
+      height: 28px;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
+    .burger span {
+      display:block;
+      height: 3px;
+      border-radius: 3px;
+      background: #FFCC1A;
+      transition: transform .28s ease, opacity .28s ease;
+    }
+    .burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .burger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+    /* le menu ouuuuu ?*/
+    .menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      background: #1A1A18;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 26px;
+      padding: 40px 20px;
+      transition: right .36s cubic-bezier(.22,.9,.3,1);
+      z-index: 1100;
+    }
+    .menu.active { right: 0; }
+
+    .menu ul { list-style: none; text-align:center; width:100%; padding:0; margin:0; }
+    .menu ul li { margin: 10px 0; }
+    .menu ul li a {
+      display:inline-block;
+      padding: 12px 18px;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 12px;
+      border: 3px solid #FFCC1A;
+      color: #fff;
+      font-size: 1.45rem;
+      font-weight: 700;
+      background: transparent;
+      transition: background .18s ease, color .18s ease, transform .12s;
+    }
+    .menu ul li a:hover { background: #FFCC1A; color: #1A1A18; transform: translateY(-3px); }
+
+
+
+
+
+/* Formulaire */
+
+.contact {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+button {
+  align-self: center;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ 
+
+/* Footer */
+footer {
+    background-color: #252A33;
+    color: #fff;
+    padding: 30px 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Partie réseaux sociaux */
+.reseaux-sociaux {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 15px 10px;
+    background-color: #252A33;
+    border-radius: 10px;
+}
+
+.reseaux-sociaux i {
+    font-size: 24px;
+    color: #1A1A18;
+    background-color: #FFCC1A;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reseaux-sociaux i:hover,
+.reseaux-sociaux i:active {
+    transform: scale(1.1);
+}
+
+/* Les menus déroulants aled */
+.footer-menus {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.footer-menus details {
+    background-color: transparent;
+    margin-bottom: 15px;
+    border-radius: 0;
+    overflow: hidden;
+    border-bottom: 2px solid #FFCC1A;
+}
+
+.footer-menus summary {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: normal;
+    list-style: none;
+    color: #fff;
+    position: relative;
+    font-size: 16px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #2a2a28;
+}
+
+.footer-menus summary::-webkit-details-marker {
+    display: none;
+}
+
+.footer-menus summary::after {
+    content: '▼';
+    position: absolute;
+    right: 20px;
+    transition: transform 0.3s ease;
+    font-size: 12px;
+    color: #FFCC1A;
+}
+
+.footer-menus details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.footer-menus ul {
+    list-style: none;
+    padding: 15px 20px 15px 30px;
+    background-color: transparent;
+    margin: 0;
+}
+
+.footer-menus ul li {
+    margin-bottom: 10px;
+}
+
+.footer-menus ul li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-menus ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 15px;
+    display: block;
+    padding: 5px 0;
+    font-weight: normal;
+}
+
+.footer-menus ul li a:hover,
+.footer-menus ul li a:active {
+    color: #FFCC1A;
+}
+
+.footer-menus p {
+    padding: 15px 20px 15px 30px;
+    background-color: transparent;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer-menus iframe {
+    width: calc(100% - 60px);
+    margin: 15px 30px;
+    border-radius: 5px;
+    min-height: 200px;
+}
+
+/* Logo moche */
+.footer-logo {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #2a2a28;
+}
+
+.footer-logo img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: bold;
+    color: #FFCC1A;
+    text-transform: uppercase;
+    margin: 0;
+}
