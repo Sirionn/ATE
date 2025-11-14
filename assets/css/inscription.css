@@ -1,0 +1,179 @@
+/* Planning en haut */
+#planning-general {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 38px;
+  padding: 0 15px;
+  background: inherit;
+}
+
+#planning-general img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  cursor: zoom-in;
+}
+
+#planning-general h2 {
+  color: #FFCC1A;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+
+/* Pop-up modal pour le planning*/
+#planning-modal {
+  display: none;
+  position: fixed;
+  z-index: 1300;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.83);
+  align-items: center; justify-content: center;
+}
+#planning-modal[style*="display: flex"] {
+  display: flex !important;
+}
+#planning-modal img {
+  max-width: 98vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+  background: #fff;
+}
+
+/* Menus déroulants */
+.inscription-menus {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto 55px auto;
+}
+
+/* Style commun des menus */
+.inscription-menus details,
+.footer-menus details {
+  background: #1E1E1E;
+  border: 2px solid #FFCC1A;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.inscription-menus summary,
+.footer-menus summary {
+  padding: 16px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: #1E1E1E;
+  color: #FFCC1A;
+  position: relative;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Flèche droite */
+.inscription-menus summary::after,
+.footer-menus summary::after {
+  content: '▼';
+  position: absolute;
+  right: 15px;
+  font-size: 14px;
+  color: #FFCC1A;
+  transition: transform 0.35s;
+}
+.inscription-menus details[open] summary::after,
+.footer-menus details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* Enlève flèche de gauche */
+.inscription-menus details > summary,
+.footer-menus details > summary {
+  list-style: none !important;
+}
+.inscription-menus details > summary::marker,
+.footer-menus details > summary::marker {
+  display: none !important;
+}
+.inscription-menus details > summary::-webkit-details-marker,
+.footer-menus details > summary::-webkit-details-marker {
+  display: none !important;
+}
+
+/* Contenu des menus déroulants */
+
+ 
+.inscription-menus summary,
+.inscription-menus ul,
+.inscription-menus li
+{
+  color: #dddbd2; 
+  font-weight: bold;
+  font-size: 1.05rem; 
+  line-height: 1.5; 
+}
+
+.inscription-menus ul p {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #FFCC1A; 
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+
+.inscription-menus ul {
+  list-style: none;
+}
+.inscription-menus ul li {
+  margin-bottom: 7px;
+}
+.inscription-menus ul li a {
+  color: #fff;
+  text-decoration: underline; 
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.inscription-menus ul li a:hover{
+  color: #FFCC1A;
+}
+
+.inscription-menus details > p {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #eee;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+
+/* Responsive media query */
+@media (max-width: 450px) {
+  #planning-general img {
+    max-width: 98vw;
+  }
+  #planning-general h2 {
+    font-size: 1.15rem;
+  }
+  .inscription-menus {
+    max-width: 100vw;
+    padding: 0;
+  }
+  .inscription-menus details,
+  .inscription-menus summary {
+    font-size: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

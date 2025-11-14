@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --yellow-light: #FFD634;
+  --yellow-main: #FFCC1A;
+  --yellow-dark: #FFAF1A;
+
+  --grey-light: #2F394A;
+  --grey-main: #252A33;
+  --grey-dark: #1A1A18;
+}

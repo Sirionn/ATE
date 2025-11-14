@@ -3,96 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/inscription.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Inscriptions</title>
 </head>
 <body>
 
+<!-- Header -->
+<header class="header">
+  <div class="header-left">
+    <img src="./assets/imgs/logo_photo.png" alt="Logo du club" class="logo">
+  </div>
+
+  <div class="header-right">
+    <button id="burger" class="burger" aria-label="Ouvrir le menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+      <nav class="menu" id="menu_nav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="histoire.html">Le club</a></li> 
+            <li><a href="#">            Actualités</a></li> <!-- on fait plus, mais on va le laisser pour les menus-->
+            <li><a href="inscription.html">Inscription</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div id="theme-switcher-container">
+        <ul>
+            <li><input type="radio" name="theme-switcher" class="theme-switcher" id="theme-light"> <label for="theme-light">Thème Light</label></li>
+            <li><input type="radio" name="theme-switcher" class="theme-switcher" id="theme-dark"> <label for="theme-dark">Thème Dark</label></li>
+            <li><input type="radio" name="theme-switcher" class="theme-switcher" id="theme-contraste"> <label for="theme-contraste">Thème Contraste</label></li>
+        </ul>
+        </div>
+    </nav>
+
+
     <!-- Planning général -->
 
     <section id="planning-general">
-    <h2>Planning des cours</h2>
+      <h2>Planning des cours</h2>
+      <br>
+
+    <img src="./assets/imgs/planning.png" alt="Planning général" id="planning-img" style="cursor:zoom-in;" />
+      <div id="planning-modal" style="display:none">
+      <div id="planning-overlay"></div>
+      <img id="planning-modal-img" alt="Planning Zoomé" />
+      </div>
+      <br>
+
     
-    <!-- Menus déroulants - pour les catégories d'âge faire copier coller le HTML-->
+    
+    <!-- Menus déroulants - pour les catégories d'âge -->
 
     <div class="inscription-menus">
 
-      <details>
-        <summary>M7</summary>
-        <ul>
-          <li><a href="documents/inscription_M7.pdf" target="_blank">📄 La fiche d’inscription</a></li>
-          <li><a href="./M7_M9_formulaire_sante.pdf" target="_blank">📄 Formulaire de santé </a></li>
-        </ul>
-        <p> Informations complémentaires </p>
-      </details>
+      <p> Catégorie suivant l'année de naissance </p>
 
       <details>
-        <summary>M9</summary>
+        <summary>Baby - 2020 et 2021 </summary>
         <ul>
+          <p> Tarif : 205 € </p>
+          <p> Nombre de cours par semaine : 1 cours </p> <br>
           <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
-          <li><a href="./M7_M9_formulaire_sante.pdf" target="_blank">📄 Formulaire de santé </a></li>
+          <li><a href="./M7_M9_formulaire_sante.pdf" target="_blank">📄 Formulaire de santé </a></li> <br>
+          
         </ul>
-        <p> Informations complémentaires </p>
+        <p> Le tarif comprend : <br> - la license fédérale,<br> - l'assurance, <br> - le prêt du matériel (sauf les gants) <br>- et la cotisation au club. <br>
+        N'oubliez pas de prévoir un chéque de caution pour le matériel !</p>
       </details>
-    </div>
-
-    <details>
-        <summary>M11</summary>
-        <ul>
-          <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
-          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li>
-        </ul>
-        <p> Informations complémentaires </p>
-      </details>
-    </div>
-
-    <details>
-        <summary>M13</summary>
-        <ul>
-          <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
-          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li>
-        </ul>
-        <p> Informations complémentaires </p>
-      </details>
-    </div>
-
-    <details>
-        <summary>M15</summary>
-        <ul>
-          <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
-          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li>
-        </ul>
-        <p> Informations complémentaires </p>
-      </details>
-    </div>
 
       <details>
-        <summary>M17</summary>
+        <summary>M7 - 2019 et 2020 </summary>
         <ul>
+          <p> Tarif : 280 € </p>
+          <p> Nombre de cours par semaine : 2 cours </p> <br>
+          <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
+          <li><a href="./M7_M9_formulaire_sante.pdf" target="_blank">📄 Formulaire de santé </a></li> <br>
+        </ul>
+        <p> Le tarif comprend : <br> - la license fédérale,<br> - l'assurance, <br> - le prêt du matériel (sauf les gants) <br>- et la cotisation au club. <br>
+        N'oubliez pas de prévoir un chéque de caution pour le matériel !</p>
+      </details>
+
+      <details>
+        <summary>M9 - 2017 et 2018 </summary>
+        <ul>
+          <p> Tarif : 280 € </p>
+          <p> Nombre de cours par semaine : 2 cours </p> <br>
+          <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
+          <li><a href="./M7_M9_formulaire_sante.pdf" target="_blank">📄 Formulaire de santé </a></li> <br>
+        </ul>
+        <p> Le tarif comprend : <br> - la license fédérale,<br> - l'assurance, <br> - le prêt du matériel (sauf les gants) <br>- et la cotisation au club. <br>
+        N'oubliez pas de prévoir un chéque de caution pour le matériel !</p>
+      </details>
+    
+
+    <details>
+        <summary>M11 - 2015 et 2016 </summary>
+        <ul>
+          <p> Tarif : 280 € </p>
+          <p> Nombre de cours par semaine : 2 cours </p> <br>
+          <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
+          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li> <br>
+        </ul>
+        <p> Le tarif comprend : <br> - la license fédérale,<br> - l'assurance, <br> - le prêt du matériel (sauf les gants) <br>- et la cotisation au club. <br>
+        N'oubliez pas de prévoir un chéque de caution pour le matériel !</p>
+      </details>
+    
+
+    <details>
+        <summary>M13 - 2013 et 2014 </summary>
+        <ul>
+          <p> Tarif : 330 € </p>
+          <p> Nombre de cours par semaine : 3 cours </p> <br>
+          <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
+          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li> <br>
+        </ul>
+        <p> Le tarif comprend : <br> - la license fédérale,<br> - l'assurance, <br> - le prêt du matériel (sauf les gants) <br>- et la cotisation au club. <br>
+        N'oubliez pas de prévoir un chéque de caution pour le matériel !</p>
+      </details>
+    
+
+    <details>
+        <summary>M15 - 2011 et 2012</summary>
+        <ul>
+          <p> Tarif : 330 € </p>
+          <p> Nombre de cours par semaine : 3 cours </p> <br>
+          <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
+          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li> <br>
+        </ul>
+        <p> Le tarif comprend : <br> - la license fédérale,<br> - l'assurance, <br> - le prêt du matériel (sauf les gants) <br>- et la cotisation au club. <br>
+        N'oubliez pas de prévoir un chéque de caution pour le matériel !</p>
+      </details>
+    
+
+      <details>
+        <summary>M17 - 2009 et 2010 </summary>
+        <ul>
+          <p> Tarif : 330 € </p>
+          <p> Nombre de cours par semaine : 3 cours </p> <br>
          <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
-          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li>
+          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li> <br>
         </ul>
-        <p> Informations complémentaires </p>
+        <p> Le tarif comprend : <br> - la license fédérale,<br> - l'assurance, <br> - le prêt du matériel (sauf les gants) <br>- et la cotisation au club. <br>
+        N'oubliez pas de prévoir un chéque de caution pour le matériel !</p>
       </details>
-    </div>
-
+    
     <details>
-        <summary>M20</summary>
+        <summary>M20 - 2006 à 2008</summary>
         <ul>
+          <p> Tarif : 330 € </p>
+          <p> Nombre de cours par semaine : 3 cours </p> <br>
          <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
-          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li>
+          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li> <br>
         </ul>
-        <p> Informations complémentaires </p>
+        <p> Le tarif comprend : <br> - la license fédérale,<br> - l'assurance, <br> - le prêt du matériel (sauf les gants) <br>- et la cotisation au club. <br>
+        N'oubliez pas de prévoir un chéque de caution pour le matériel !</p>
       </details>
-    </div>
+    
 
     <details>
-        <summary>Adultes</summary>
+        <summary>Seniors et vétérans - avant 2005 </summary>
         <ul>
+          <p> Tarif : 255 € </p>
+          <p> Nombre de cours par semaine : 1 cours (+ 1 soirée d'assauts) </p> <br>
           <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
-          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li>
+          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li> <br>
         </ul>
-        <p> Informations complémentaires </p>
+        <p> Le tarif comprend : <br> - la license fédérale,<br> - l'assurance, <br> - le prêt du matériel (sauf les gants) <br>- et la cotisation au club. <br>
+        N'oubliez pas de prévoir un chéque de caution pour le matériel !</p>
       </details>
+
+       <details>
+        <summary>Tarifs spéciaux </summary>
+        <ul>
+          <p> Handisport, étudiants et débutant (première année uniquement) </p>
+          <p> Tarif : 205 € </p>
+          <p> Nombre de cours par semaine : 1 cours (+ 1 soirée d'assauts) </p> <br>
+          <li><a href="./fiche_inscription.pdf" target="_blank">📄 La fiche d’inscription</a></li>
+          <li><a href="./M11_plus_certificat_medical.pdf" target="_blank">📄 Certificat médical </a></li> <br>
+        </ul>
+        <p> Le tarif comprend : <br> - la license fédérale,<br> - l'assurance, <br> - le prêt du matériel (sauf les gants) <br>- et la cotisation au club. <br>
+        N'oubliez pas de prévoir un chéque de caution pour le matériel !</p>
+      </details>
+
     </div>
 
     <!-- Footer -->
@@ -100,11 +198,11 @@
     <footer>
     <!-- Réseaux sociaux -->
     <div class="reseaux-sociaux">
-      <a href="#"><img src="#" alt="YouTube"></a>
-      <a href="#"><img src="#" alt="X"></a>
-      <a href="#"><img src="#" alt="Facebook"></a>
-      <a href="#"><img src="#" alt="TikTok"></a>
-      <a href="#"><img src="#" alt="Instagram"></a>
+      <i class="bi bi-youtube" alt="YouTube"> </i> 
+      <i class="bi bi-twitter-x" alt="X"> </i> 
+      <i class="bi bi-facebook" alt="Facebook"> </i> 
+      <i class="bi bi-tiktok" alt="TikTok"> </i> 
+      <i class="bi bi-instagram" alt="Instagram"> </i> 
     </div>
 
     <!-- Menus déroulants -->
@@ -149,10 +247,12 @@
 
     <!-- Logo -->
     <div class="footer-logo">
+    <img src="./logo_photo.png" alt = "Logo" />
       <p><strong>AMICALE<br>TARBAISE<br>D’ESCRIME</strong></p>
     </div>
   </footer>
 
-
+  <script src="./assets/js/menu.js"></script> 
+  <script src="./assets/js/Menu Inscription.js"></script>
 </body>
 </html>

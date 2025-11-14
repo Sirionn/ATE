@@ -1,0 +1,102 @@
+@import url('./commons.css');
+
+.second {
+    margin: 0px 20px;
+    color: var(--yellow-main);
+}
+
+/*------Histoire------*/
+.histoire {
+    padding:1rem;
+    margin-bottom: 40px;
+
+}
+
+/*------Timeline------*/
+.timeline {
+    position: relative;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    width: 50%;
+}
+
+.timeline-item.left {
+    left: -1%;
+}
+
+.timeline-item.right {
+    left: 51%;
+}
+
+.timeline-item .content {
+    color: white;
+    padding: 10px;
+}
+
+.timeline-item h3 {
+    color: var(--yellow-main);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timeline-item h4 {
+    color: var(--yellow-light);
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    font-size: 14px;
+}
+
+.timeline-item.left .content {
+    margin-left: -40px;
+}
+
+.timeline-item.right .content {
+    margin-right: -40px;
+}
+
+/*------Entraineurs------*/
+.personne-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap:10px; 
+}
+
+.personne {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1A1A18;
+  color: #FFCC1A;
+
+}
+
+.personne-image{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.personne-nom{
+    font-family: "montserrat";
+}
