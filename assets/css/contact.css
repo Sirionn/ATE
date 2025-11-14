@@ -1,0 +1,32 @@
+@import url('./commons.css');
+
+.contact h1 {
+    text-align: center;
+    color: var(--yellow-main);
+    margin-top: 30px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.contact h3 {
+    text-align: center;
+    margin: 0px 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 10vw;
+    padding: 10vw 5vh;
+    border-radius: 25px;
+    background-color: var(--grey-light);
+}
+
+input {
+    border-radius: 999px;
+    border: none;
+    padding: 10px 20px;
+    width: 85%;
+    margin-left: 5%;
+}

@@ -79,7 +79,8 @@
 .personne-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap:10px; 
+  grid-gap:10px;
+  margin: 2vh 0;
 }
 
 .personne {
@@ -91,12 +92,21 @@
 }
 
 .personne-image{
-    width: 80px;
-    height: 80px;
+    width: 15vh;
+    height: 15vh;
     object-fit: cover;
     border-radius: 50%;
+    display: flex;
+    justify-self: center;
+    margin-bottom: 10px;
 }
 
 .personne-nom{
-    font-family: "montserrat";
+    font-weight: 800;
+    font-style: italic;
+    font-size: large;
+}
+
+.personne-container, .timeline, .presentation {
+    padding: 0 1.5vw;
 }
