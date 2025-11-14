@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
-    <script src="menu.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
@@ -13,7 +12,7 @@
 <!-- Header, menu et compagnie-->
  <header class="header">
   <div class="header-left">
-    <img src="./logo_photo.png" alt="Logo du club" class="logo">
+    <img src="./assets/imgs/logo_photo.png" alt="Logo du club" class="logo">
   </div>
 
   <div class="header-right">
@@ -25,23 +24,30 @@
   </div>
 </header>
 
-      <nav class="menu" id="menu">
+      <nav class="menu" id="menu_nav">
         <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Actualités</a></li>
-            <li><a href="#">Calendrier</a></li>
-            <li><a href="#">Le club</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="histoire.html">Le club</a></li> 
+            <li><a href="#">            Actualités</a></li>
+            <li><a href="./inscription.html">Inscription</a></li> <!-- à mettre le planning général de tous les niveaux mélangés --> 
+            <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div id="theme-switcher-container">
+        <ul>
+            <li><input type="radio" name="theme-switcher" class="theme-switcher" id="theme-light"> <label for="theme-light">Thème Light</label></li>
+            <li><input type="radio" name="theme-switcher" class="theme-switcher" id="theme-dark"> <label for="theme-dark">Thème Dark</label></li>
+            <li><input type="radio" name="theme-switcher" class="theme-switcher" id="theme-contraste"> <label for="theme-contraste">Thème Contraste</label></li>
+        </ul>
+        </div>
     </nav>
 
 <!-- Début de la page -->
 <section class="hero">
     <div class="image_hero">
         <div class="texte_hero">
-            <div class="...">...</div>
-            <div class="...">...</div>
-            <div class="...">...</div>
+            <div class="titre">AMICALE<br>
+                             TARBAISE<br>
+                             D'ESCRIME</div>
             <a href="#" class="btn">Découvrir le club</a>
         </div>
         <img src="./assets/imgs/hero_home.jpg" alt="...">
@@ -49,59 +55,195 @@
 </section>
 
 <!-- Section Actualités - à faire copier coller pour les autres container -->
-<section class="actualites">
-    <h2 class="titre">ACTUALITÉS</h2>
-    
-    <div class="carousel">
+<section class="actualites scroll-title">
+  <h2 class="titre">
+  <span class="titre-track">
+    <span class="titre-item">ACTUALITÉS</span>
+    <span class="titre-item">ACTUALITÉS</span>
+    <span class="titre-item">ACTUALITÉS</span>
+  </span>
+</h2>
+
+
+  <div class="carousel">
         <div class="carousel-container">
             <!-- 1 -->
             <article class="carousel-item">
                 <div class="carousel-card">
+                    <span class="date">12 JAN 2025</span>
+                    <img src="./assets/imgs/actu.jpg" alt="Actualité 1">
+                    <div class="card-content">
+                    <h3>Titre de l’actualité</h3>
+                    <p>Description de l’actualité...</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carousel-item">
+                <div class="carousel-card">
                     <span class="date">...</span>
-                    <img src="#" alt="Actualité 1">
+                    <img src="./assets/imgs/actu.jpg" alt="Actualité 1">
                     <div class="card-content">
                         <h3>Titre</h3>
                         <p>Description</p>
                     </div>
                 </div>
             </article>
-            
-            <!-- "Voir plus" -->
+
+            <article class="carousel-item">
+                <div class="carousel-card">
+                    <span class="date">...</span>
+                    <img src="./assets/imgs/actu.jpg" alt="Actualité 1">
+                    <div class="card-content">
+                        <h3>Titre</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carousel-item">
+                <div class="carousel-card">
+                    <span class="date">...</span>
+                    <img src="./assets/imgs/actu.jpg" alt="Actualité 1">
+                    <div class="card-content">
+                        <h3>Titre</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </article>
+
             <article class="carousel-item">
                 <a href="#" class="carousel-card card-more">
-                    <span>Voir toutes les actualités</span>
+                    <span class="card-more-title">Voir toutes les actualités</span>
                     <span class="btn">Call to action</span>
                 </a>
             </article>
         </div>
+    </div>
 </section>
 
 <!-- Section planning - à faire copier coller pour les autres container -->
 
-<section class="planning">
-    <h2 class="section-title">PLANNING</h2>
-    
-    <div class="carousel">
-        <div class="carousel-container">
+<section class="planning scroll-title">
+  <h2 class="titre">
+  <span class="titre-track">
+    <span class="titre-item">PLANNING</span>
+    <span class="titre-item">PLANNING</span>
+    <span class="titre-item">PLANNING</span>
+  </span>
+</h2>
 
-            <!-- Baby -->
+
+  <div class="carousel-planning">
+        <div class="carousel-container">
+            <!-- 1 -->
             <article class="carousel-item">
-                <div class="planning-card">
-                    <h3 class="category">Titre</h3>
-                    <div class="planning">
-                        <div class="planning-item">
-                            <span class="day">Jour</span>
-                            <span class="heure">Heure</span>
+                <div class="carousel-card">
+                    <div class="card-content">
+                        <div class="title-group">
+                            <h3 class="title secondary">BABY</h3>
+                            <h3 class="title">BABY</h3>
+                            <h3 class="title secondary">BABY</h3>
                         </div>
-                        <div class="schedule-item">
-                            <span class="day">Autre jour</span>
-                            <span class="heure">Heure</span>
+
+                        <div class="planning-grid">
+                            <div class="day">
+                                <span class="day-label">Lun</span>
+                                <span class="slot">-</span>
+                            </div>
+                            <div class="day">
+                                <span class="day-label">Mar</span>
+                                <span class="slot">-</span>
+                            </div>
+                            <div class="day">
+                                <span class="day-label">Mer</span>
+                                <span class="slot">17h–18h</span>
+                            </div>
+                            <div class="day">
+                                <span class="day-label">Jeu</span>
+                                <span class="slot">-</span>
+                            </div>
+                            <div class="day day-full">
+                                <span class="day-label">Ven</span>
+                                <span class="slot">-</span>
+                            </div>
                         </div>
-                    <a href="#" class="btn-secondary">Voir le planning</a>
-                    <a href="#" class="btn-secondary">Inscription</a>
+                    </div>
                 </div>
             </article>
-        </section>
+
+            <article class="carousel-item">
+                <div class="carousel-card">
+                    <div class="card-content">
+                        <div class="title-group">
+                            <h3 class="title secondary">M7</h3>
+                            <h3 class="title">M7</h3>
+                            <h3 class="title secondary">M7</h3>
+                        </div>
+
+                        <div class="planning-grid">
+                            <div class="day">
+                                <span class="day-label">Lun</span>
+                                <span class="slot">-</span>
+                            </div>
+                            <div class="day">
+                                <span class="day-label">Mar</span>
+                                <span class="slot">-</span>
+                            </div>
+                            <div class="day">
+                                <span class="day-label">Mer</span>
+                                <span class="slot">16h–17h30</span>
+                            </div>
+                            <div class="day">
+                                <span class="day-label">Jeu</span>
+                                <span class="slot">-</span>
+                            </div>
+                            <div class="day day-full">
+                                <span class="day-label">Ven</span>
+                                <span class="slot">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="carousel-item">
+                <div class="carousel-card">
+                    <div class="card-content">
+                        <div class="title-group">
+                            <h3 class="title secondary">M9</h3>
+                            <h3 class="title">M9</h3>
+                            <h3 class="title secondary">M9</h3>
+                        </div>
+
+                        <div class="planning-grid">
+                            <div class="day">
+                                <span class="day-label">Lun</span>
+                                <span class="slot">-</span>
+                            </div>
+                            <div class="day">
+                                <span class="day-label">Mar</span>
+                                <span class="slot">-</span>
+                            </div>
+                            <div class="day">
+                                <span class="day-label">Mer</span>
+                                <span class="slot">16h–17h30</span>
+                            </div>
+                            <div class="day">
+                                <span class="day-label">Jeu</span>
+                                <span class="slot">-</span>
+                            </div>
+                            <div class="day day-full">
+                                <span class="day-label">Ven</span>
+                                <span class="slot">17h-19h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
 
 <!-- Résultats des compétitions - palmarés - à faire copier coller pour les autres catégories -->
 
@@ -241,4 +383,42 @@
 
 
 </body>
+<script src="menu.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // grab ALL scrolling title tracks
+    const tracks = Array.from(document.querySelectorAll('.scroll-title .titre-track'));
+    if (!tracks.length) return;
+
+    const factor = 0.4; // speed: horizontal per vertical scroll
+    const widths = new Map();
+
+    function recalc() {
+      tracks.forEach(track => {
+        widths.set(track, track.scrollWidth);
+      });
+    }
+
+    function onScroll() {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+      tracks.forEach(track => {
+        const trackWidth = widths.get(track) || track.scrollWidth || 1;
+        const x = (scrollY * factor) % trackWidth;
+        track.style.transform = `translateX(${-x}px)`;
+      });
+    }
+
+    recalc();
+    onScroll();
+
+    window.addEventListener('resize', () => {
+      recalc();
+      onScroll();
+    });
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+  });
+</script>
+
 </html>

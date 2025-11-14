@@ -1,0 +1,69 @@
+<section class="actualites">
+  <h2 class="titre">ACTUALITÉS</h2>
+
+  <div class="carousel">
+    <div class="carousel-container">
+      <!-- 1 -->
+      <article class="carousel-item">
+        <div class="carousel-card">
+          <span class="date">...</span>
+          <img src="#" alt="Actualité 1">
+          <div class="card-content">
+            <h3>Titre</h3>
+            <p>Description</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- "Voir plus" -->
+      <article class="carousel-item">
+        <a href="#" class="carousel-card card-more">
+          <span>Voir toutes les actualités</span>
+          <span class="btn">Call to action</span>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  body {
+    min-height: 200vh; /* just to be sure the page can scroll */
+    margin: 0;
+    font-family: system-ui, sans-serif;
+  }
+
+  .actualites {
+    padding: 4rem 2rem;
+    background: #111;
+    color: white;
+  }
+
+  .actualites .titre {
+    display: inline-block;   /* needed so transform is visible */
+    font-size: 2.5rem;
+    will-change: transform;
+    transition: transform 0.05s linear;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const title = document.querySelector('.actualites .titre');
+    if (!title) {
+      console.warn('No .actualites .titre found');
+      return;
+    }
+
+    const factor = 0.4; // bigger number = more horizontal movement
+
+    function onScroll() {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      const x = scrollY * factor;
+      title.style.transform = `translateX(${x}px)`;
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  });
+</script>
