@@ -1,0 +1,225 @@
+/* ===== Variables ===== */
+:root {
+  --yellow-light: #FFD634;
+  --yellow-main:  #FFCC1A;
+  --yellow-dark:  #FFAF1A;
+
+  --grey-light: #2F394A;
+  --grey-main:  #252A33;
+  --grey-dark:  #1A1A18;
+}
+
+/* ===== Calendrier ===== */
+.section-calendrier {
+  background: var(--grey-main);
+  color: #fff;
+  padding: 3rem 1.5rem 3.5rem;
+}
+
+.calendrier-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.cal-main {
+  flex: 1 1 auto;
+}
+
+.cal-month {
+  margin-bottom: 2rem;
+}
+
+.cal-month-label {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--yellow-main);
+}
+
+.cal-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 1.4rem;
+  margin-bottom: 1rem;
+  border-radius: 25px;
+  border: 2px solid var(--yellow-main);
+}
+
+.cal-card-info h3 {
+  margin: 0 0 0.1rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.cal-card-date {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--yellow-main);
+}
+
+.cal-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: var(--yellow-main);
+  color: #222;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cal-card-arrow {
+  font-size: 1rem;
+}
+
+.cal-big-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  background: var(--yellow-dark);
+  color: var(--grey-main);
+  font-weight: 900;
+  font-size: 1em;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.cal-side-title {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .calendrier-inner {
+    align-items: stretch;
+  }
+
+  .cal-side-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cal-side-title span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 3.6rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    color: var(--grey-light);
+  }
+}
+
+/* ===== Chiffres ===== */
+.section-chiffres {
+  position: relative;
+  background: var(--yellow-dark);
+  color: var(--grey-main);
+  padding: 3rem 1.5rem 3.5rem;
+  overflow: hidden;
+}
+
+.chiffres-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-weight: 900;
+  font-size: 10vh;
+  font-style: italic;
+  color: var(--yellow-main);
+  user-select: none;
+  pointer-events: none;
+}
+
+.chiffres-bg span {
+  text-transform: uppercase;
+}
+
+.chiffres-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.chiffres-title {
+  margin: 0 0 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.chiffres-logo {
+  margin-bottom: 1.5rem;
+}
+
+.chiffres-logo img {
+  max-height: 120px;
+}
+
+.chiffres-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.chiffre-card {
+  background: var(--grey-main);
+  color: #fff;
+  border-radius: 24px;
+  padding: 1.3rem 1rem;
+  text-align: left;
+  font-style: italic;
+}
+
+.chiffre-number {
+  margin: 0 0 0.4rem;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--yellow-dark);
+}
+
+.chiffre-text {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.chiffres-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.8rem;
+  border-radius: 999px;
+  background: var(--grey-main);
+  color: var(--yellow-dark);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.chiffres-cta-arrow {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
+  .chiffres-grid {
+    grid-template-columns: 1fr;
+  }
+}
