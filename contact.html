@@ -9,56 +9,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
+    
 
-<!-- Header, menu et compagnie-->
-
- <header class="header">
-  <div class="header-left">
-    <img src="./logo_photo.png" alt="Logo du club" class="logo">
-  </div>
-
-  <div class="header-right">
-    <button id="burger" class="burger" aria-label="Ouvrir le menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</header>
-
-      <nav class="menu" id="menu_nav">
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="histoire.html">Le club</a></li> 
-            <li><a href="#">            Actualités</a></li>
-            <li><a href="./inscription.html">Inscription</a></li> <!-- à mettre le planning général de tous les niveaux mélangés --> 
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div id="theme-switcher-container">
-        <ul>
-            <li><input type="radio" name="theme-switcher" class="theme-switcher" id="theme-light"> <label for="theme-light">Thème Light</label></li>
-            <li><input type="radio" name="theme-switcher" class="theme-switcher" id="theme-dark"> <label for="theme-dark">Thème Dark</label></li>
-            <li><input type="radio" name="theme-switcher" class="theme-switcher" id="theme-contraste"> <label for="theme-contraste">Thème Contraste</label></li>
-        </ul>
-        </div>
-    </nav>
-
-<!-- Début de la page -->
-    <section class="hero">
-    <div class="texte_hero">
-        <div class="...">...</div>
-        <div class="...">...</div>
-        <div class="...">...</div>
-        <a href="#" class="btn">Découvrir le club</a>
-    </div>
-    <div class="image_hero">
-        <img src="#" alt="...">
-    </div>
-</section>
 
 <!-- Formulaire de contact -->
 <section class="contact">
-  <h2>Contactez-nous</h2>
+  <h1>Contactez-nous !</h1>
+  <h3>+33(0)562345176</h3>
 
   <form class="contact-form" action="#" method="post">
     <div class="form-group">
@@ -71,17 +28,17 @@
       <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
     </div>
 
-    <div class="form-group">
+    <div class="form">
       <label for="email">E-mail</label>
       <input type="email" id="email" name="email" placeholder="votremail@example.com" required>
     </div>
 
-    <div class="form-group">
-      <label for="sujet">Sujet</label>
+    <div class="form">
+      <label for="sujet">Objet</label>
       <input type="text" id="sujet" name="sujet" placeholder="Sujet du message" required>
     </div>
 
-    <div class="form-group">
+    <div class="form">
       <label for="message">Message</label>
       <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
     </div>
@@ -89,67 +46,6 @@
     <button type="submit">Envoyer</button>
   </form>
 </section>
-
-<!-- Footer -->
-
- <footer>
-    <!-- Réseaux sociaux -->
-     <div class="reseaux-sociaux">
-      <i class="bi bi-youtube" alt="YouTube"> </i> 
-      <i class="bi bi-twitter-x" alt="X"> </i> 
-      <i class="bi bi-facebook" alt="Facebook"> </i> 
-      <i class="bi bi-tiktok" alt="TikTok"> </i> 
-      <i class="bi bi-instagram" alt="Instagram"> </i> 
-     
-    </div>
-
-    <!-- Menus déroulants -->
-    <div class="footer-menus">
-
-      <details>
-        <summary>Mentions légales & Confidentialité</summary>
-        <ul>
-          <li><a href="#">Mentions légales</a></li>
-          <li><a href="#">Politique de confidentialité</a></li>
-          <li><a href="#">Cookies</a></li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>Sponsors</summary>
-        <ul>
-          <li><a href="#">Nos partenaires</a></li>
-          <li><a href="#">Devenir sponsor</a></li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>Venir nous encourager</summary>
-        <ul>
-          <li><a href="#">Prochains matchs</a></li>
-          <li><a href="#">Calendrier complet</a></li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>Nous retrouver</summary>
-        <p>Amicale Tarbaise d’Escrime<br>
-           4 Rue André Breuer<br>
-           65000 Tarbes</p>
-        <iframe 
-          src="https://www.google.com/maps?q=Amicale+Tarbaise+d'Escrime,+Tarbes&output=embed"
-          width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
-      </details>
-    </div>
-
-    <!-- Logo -->
-    <div class="footer-logo">
-    <img src="./logo_photo.png" alt = "Logo" />
-      <p><strong>AMICALE<br>TARBAISE<br>D’ESCRIME</strong></p>
-    </div>
-  </footer>
-
 
 </body>
 </html>
