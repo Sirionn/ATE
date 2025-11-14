@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="homepage.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/homepage.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -634,41 +634,7 @@
     </div>
   </footer>
 
-  <script src="menu.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const tracks = Array.from(document.querySelectorAll('.scroll-title .titre-track'));
-      if (!tracks.length) return;
-
-      const factor = 0.4;
-      const widths = new Map();
-
-      function recalc() {
-        tracks.forEach(track => {
-          widths.set(track, track.scrollWidth);
-        });
-      }
-
-      function onScroll() {
-        const scrollY = window.scrollY || document.documentElement.scrollTop;
-
-        tracks.forEach(track => {
-          const trackWidth = widths.get(track) || track.scrollWidth || 1;
-          const x = (scrollY * factor) % trackWidth;
-          track.style.transform = `translateX(${-x}px)`;
-        });
-      }
-
-      recalc();
-      onScroll();
-
-      window.addEventListener('resize', () => {
-        recalc();
-        onScroll();
-      });
-
-      window.addEventListener('scroll', onScroll, { passive: true });
-    });
-  </script>
+  <script src="./assets/js/menu.js"></script>
+  <script src="./assets/js/title_slide.js"></script>
 </body>
 </html>
