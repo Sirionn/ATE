@@ -1,622 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="homepage.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/homepage.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
+  <header class="header">
+    <div class="header-left">
+      <img src="./assets/imgs/logo_photo.png" alt="Logo du club" class="logo">
+    </div>
+    <div class="header-right">
+      <button id="burger" class="burger" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-<!-- Header, menu et compagnie-->
- <header class="header">
-  <div class="header-left">
-    <img src="./assets/imgs/logo_photo.png" alt="Logo du club" class="logo">
-  </div>
+  <nav class="menu" id="menu_nav">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="histoire.html">Le club</a></li>
+      <li><a href="#">Actualités</a></li>
+      <li><a href="./inscription.html">Inscription</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div id="theme-switcher-container">
+      <ul>
+        <li>
+          <input type="radio" name="theme-switcher" class="theme-switcher" id="theme-light">
+          <label for="theme-light">Thème Light</label>
+        </li>
+        <li>
+          <input type="radio" name="theme-switcher" class="theme-switcher" id="theme-dark">
+          <label for="theme-dark">Thème Dark</label>
+        </li>
+        <li>
+          <input type="radio" name="theme-switcher" class="theme-switcher" id="theme-contraste">
+          <label for="theme-contraste">Thème Contraste</label>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-  <div class="header-right">
-    <button id="burger" class="burger" aria-label="Ouvrir le menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</header>
-
-      <nav class="menu" id="menu_nav">
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="histoire.html">Le club</a></li> 
-            <li><a href="#">            Actualités</a></li>
-            <li><a href="./inscription.html">Inscription</a></li> <!-- à mettre le planning général de tous les niveaux mélangés --> 
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div id="theme-switcher-container">
-        <ul>
-            <li><input type="radio" name="theme-switcher" class="theme-switcher" id="theme-light"> <label for="theme-light">Thème Light</label></li>
-            <li><input type="radio" name="theme-switcher" class="theme-switcher" id="theme-dark"> <label for="theme-dark">Thème Dark</label></li>
-            <li><input type="radio" name="theme-switcher" class="theme-switcher" id="theme-contraste"> <label for="theme-contraste">Thème Contraste</label></li>
-        </ul>
-        </div>
-    </nav>
-
-<!-- Début de la page -->
-<section class="hero">
+  <section class="hero">
     <div class="image_hero">
-        <div class="texte_hero">
-            <div class="titre">AMICALE<br>
-                             TARBAISE<br>
-                             D'ESCRIME</div>
-            <a href="#" class="btn">Découvrir le club</a>
+      <div class="texte_hero">
+        <div class="titre">
+          AMICALE<br>
+          TARBAISE<br>
+          D'ESCRIME
         </div>
-        <img src="./assets/imgs/hero_home.jpg" alt="...">
-    </div>
-</section>
-
-<!-- Section Actualités - à faire copier coller pour les autres container -->
-<section class="actualites scroll-title">
-  <h2 class="titre">
-  <span class="titre-track">
-    <span class="titre-item">ACTUALITÉS</span>
-    <span class="titre-item">ACTUALITÉS</span>
-    <span class="titre-item">ACTUALITÉS</span>
-  </span>
-</h2>
-
-
-  <div class="carousel">
-        <div class="carousel-container">
-            <!-- 1 -->
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <span class="date">12 JAN 2025</span>
-                    <img src="./assets/imgs/actu.jpg" alt="Actualité 1">
-                    <div class="card-content">
-                    <h3>Titre de l’actualité</h3>
-                    <p>Description de l’actualité...</p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <span class="date">...</span>
-                    <img src="./assets/imgs/actu.jpg" alt="Actualité 1">
-                    <div class="card-content">
-                        <h3>Titre</h3>
-                        <p>Description</p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <span class="date">...</span>
-                    <img src="./assets/imgs/actu.jpg" alt="Actualité 1">
-                    <div class="card-content">
-                        <h3>Titre</h3>
-                        <p>Description</p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <span class="date">...</span>
-                    <img src="./assets/imgs/actu.jpg" alt="Actualité 1">
-                    <div class="card-content">
-                        <h3>Titre</h3>
-                        <p>Description</p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="carousel-item">
-                <a href="#" class="carousel-card card-more">
-                    <span class="card-more-title">Voir toutes les actualités</span>
-                    <span class="btn">Call to action</span>
-                </a>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- Section planning - à faire copier coller pour les autres container -->
-
-<section class="planning scroll-title">
-  <h2 class="titre">
-  <span class="titre-track">
-    <span class="titre-item">PLANNING</span>
-    <span class="titre-item">PLANNING</span>
-    <span class="titre-item">PLANNING</span>
-  </span>
-</h2>
-
-
-  <div class="carousel-planning">
-        <div class="carousel-container">
-            <!-- Baby -->
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="title-group">
-                            <h3 class="title secondary">BABY</h3>
-                            <h3 class="title">BABY</h3>
-                            <h3 class="title secondary">BABY</h3>
-                        </div>
-
-                        <div class="planning-grid">
-                            <div class="day">
-                                <span class="day-label">Lun</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mar</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mer</span>
-                                <span class="slot">17h–18h</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Jeu</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day day-full">
-                                <span class="day-label">Ven</span>
-                                <span class="slot">-</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- M7 -->
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="title-group">
-                            <h3 class="title secondary">M7</h3>
-                            <h3 class="title">M7</h3>
-                            <h3 class="title secondary">M7</h3>
-                        </div>
-
-                        <div class="planning-grid">
-                            <div class="day">
-                                <span class="day-label">Lun</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mar</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mer</span>
-                                <span class="slot">16h–17h30</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Jeu</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day day-full">
-                                <span class="day-label">Ven</span>
-                                <span class="slot">-</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- M9 -->
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="title-group">
-                            <h3 class="title secondary">M9</h3>
-                            <h3 class="title">M9</h3>
-                            <h3 class="title secondary">M9</h3>
-                        </div>
-
-                        <div class="planning-grid">
-                            <div class="day">
-                                <span class="day-label">Lun</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mar</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mer</span>
-                                <span class="slot">16h–17h30</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Jeu</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day day-full">
-                                <span class="day-label">Ven</span>
-                                <span class="slot">17h-19h</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- M11 -->
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="title-group">
-                            <h3 class="title secondary">M11</h3>
-                            <h3 class="title">M11</h3>
-                            <h3 class="title secondary">M11</h3>
-                        </div>
-
-                        <div class="planning-grid">
-                            <div class="day">
-                                <span class="day-label">Lun</span>
-                                <span class="slot">17h-19h30</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mar</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mer</span>
-                                <span class="slot">14h–16h</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Jeu</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day day-full">
-                                <span class="day-label">Ven</span>
-                                <span class="slot">17h-19h</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- M13 -->
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="title-group">
-                            <h3 class="title secondary">M13</h3>
-                            <h3 class="title">M13</h3>
-                            <h3 class="title secondary">M13</h3>
-                        </div>
-
-                        <div class="planning-grid">
-                            <div class="day">
-                                <span class="day-label">Lun</span>
-                                <span class="slot">17h-19h30</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mar</span>
-                                <span class="slot">17h-20h30</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mer</span>
-                                <span class="slot">14h–16h</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Jeu</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day day-full">
-                                <span class="day-label">Ven</span>
-                                <span class="slot">17h-19h</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- M15 -->
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="title-group">
-                            <h3 class="title secondary">M15</h3>
-                            <h3 class="title">M15</h3>
-                            <h3 class="title secondary">M15</h3>
-                        </div>
-
-                        <div class="planning-grid">
-                            <div class="day">
-                                <span class="day-label">Lun</span>
-                                <span class="slot">17h-19h30</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mar</span>
-                                <span class="slot">17h-20h30</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mer</span>
-                                <span class="slot">14h–16h</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Jeu</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day day-full">
-                                <span class="day-label">Ven</span>
-                                <span class="slot">17h-19h</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- M17 -->
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="title-group">
-                            <h3 class="title secondary">M17</h3>
-                            <h3 class="title">M17</h3>
-                            <h3 class="title secondary">M17</h3>
-                        </div>
-
-                        <div class="planning-grid">
-                            <div class="day">
-                                <span class="day-label">Lun</span>
-                                <span class="slot">17h-19h30</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mar</span>
-                                <span class="slot">17h-20h30</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mer</span>
-                                <span class="slot">14h–16h</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Jeu</span>
-                                <span class="slot">18h-19h30</span>
-                            </div>
-                            <div class="day day-full">
-                                <span class="day-label">Ven</span>
-                                <span class="slot">17h-19h</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- M20 -->
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="title-group">
-                            <h3 class="title secondary">M20</h3>
-                            <h3 class="title">M20</h3>
-                            <h3 class="title secondary">M20</h3>
-                        </div>
-
-                        <div class="planning-grid">
-                            <div class="day">
-                                <span class="day-label">Lun</span>
-                                <span class="slot">17h-19h30</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mar</span>
-                                <span class="slot">17h-20h30</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mer</span>
-                                <span class="slot">14h–16h</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Jeu</span>
-                                <span class="slot">18h-19h30</span>
-                            </div>
-                            <div class="day day-full">
-                                <span class="day-label">Ven</span>
-                                <span class="slot">17h-19h</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Adultes -->
-            <article class="carousel-item">
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="title-group">
-                            <h3 class="title">ADULTES</h3>
-                        </div>
-
-                        <div class="planning-grid">
-                            <div class="day">
-                                <span class="day-label">Lun</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mar</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Mer</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day">
-                                <span class="day-label">Jeu</span>
-                                <span class="slot">-</span>
-                            </div>
-                            <div class="day day-full">
-                                <span class="day-label">Ven</span>
-                                <span class="slot">19h-21h</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </div>
-    <div class="planning-actions">
-        <a href="#" class="planning-btn primary">Voir le planning</a>
-        <a href="#" class="planning-btn secondary">Envie de s'inscrire ?</a>
-    </div>
-</section>
-
-<!-- Résultats des compétitions - palmarés - à faire copier coller pour les autres catégories -->
-
-<section class="section-calendrier">
-  <div class="calendrier-inner">
-
-    <!-- LEFT: months + events + big button -->
-    <div class="cal-main">
-      <!-- Month block -->
-      <div class="cal-month">
-        <p class="cal-month-label">DEC. 2025</p>
-
-        <article class="cal-card">
-          <div class="cal-card-info">
-            <h3>Championnat de France</h3>
-            <p class="cal-card-date">01/02/26</p>
-          </div>
-          <a href="#" class="cal-card-cta">
-            <span>Bientôt</span>
-            <span class="cal-card-arrow">›</span>
-          </a>
-        </article>
-
-        <article class="cal-card">
-          <div class="cal-card-info">
-            <h3>Championnat de France</h3>
-            <p class="cal-card-date">01/02/26</p>
-          </div>
-          <a href="#" class="cal-card-cta">
-            <span>Bientôt</span>
-            <span class="cal-card-arrow">›</span>
-          </a>
-        </article>
+        <a href="#" class="btn">Découvrir le club</a>
       </div>
-
-      <!-- Another month -->
-      <div class="cal-month">
-        <p class="cal-month-label">JAN. 2026</p>
-
-        <article class="cal-card">
-          <div class="cal-card-info">
-            <h3>Championnat de France</h3>
-            <p class="cal-card-date">01/02/26</p>
-          </div>
-          <a href="#" class="cal-card-cta">
-            <span>Bientôt</span>
-            <span class="cal-card-arrow">›</span>
-          </a>
-        </article>
-
-        <article class="cal-card">
-          <div class="cal-card-info">
-            <h3>Championnat de France</h3>
-            <p class="cal-card-date">01/02/26</p>
-          </div>
-          <a href="#" class="cal-card-cta">
-            <span>Bientôt</span>
-            <span class="cal-card-arrow">›</span>
-          </a>
-        </article>
-      </div>
-
-      <!-- Big bottom button -->
-      <a href="#" class="cal-big-cta">
-        <span>LE CALENDRIER</span>
-      </a>
+      <img src="./assets/imgs/hero_home.jpg" alt="...">
     </div>
+  </section>
 
-    <!-- RIGHT: vertical "CALENDRIER" -->
-    <div class="cal-side-title">
-      <span>CALENDRIER</span>
-    </div>
-  </div>
-</section>
-
-
-<!-- Les chiffres - data -->
-
-<section class="section-chiffres">
-  <!-- background text (not selectable) -->
-  <div class="chiffres-bg" aria-hidden="true">
-    <span>LE CLUB</span>
-    <span>LE CLUB</span>
-    <span>LE CLUB</span>
-    <span>LE CLUB</span>
-    <span>LE CLUB</span>
-    <span>LE CLUB</span>
-    <span>LE CLUB</span>
-    <span>LE CLUB</span>
-    <span>LE CLUB</span>
-    <span>LE CLUB</span>
-    <span>LE CLUB</span>
-    <span>LE CLUB</span>
-  </div>
-
-  <div class="chiffres-inner">
-    <h2 class="chiffres-title">
-      Le club en<br>quelques chiffres
+  <section class="actualites scroll-title">
+    <h2 class="titre">
+      <span class="titre-track">
+        <span class="titre-item">ACTUALITÉS</span>
+        <span class="titre-item">ACTUALITÉS</span>
+        <span class="titre-item">ACTUALITÉS</span>
+      </span>
     </h2>
 
-    <!-- logo in the middle -->
-    <div class="chiffres-logo">
-      <img src="./assets/imgs/logo_photo.png" alt="">
+    <div class="carousel">
+      <div class="carousel-container">
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <span class="date">12 JAN 2025</span>
+            <img src="./assets/imgs/actu.jpg" alt="Actualité 1">
+            <div class="card-content">
+              <h3>Titre de l’actualité</h3>
+              <p>Description de l’actualité...</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <span class="date">...</span>
+            <img src="./assets/imgs/actu.jpg" alt="Actualité 1">
+            <div class="card-content">
+              <h3>Titre</h3>
+              <p>Description</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <span class="date">...</span>
+            <img src="./assets/imgs/actu.jpg" alt="Actualité 1">
+            <div class="card-content">
+              <h3>Titre</h3>
+              <p>Description</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <span class="date">...</span>
+            <img src="./assets/imgs/actu.jpg" alt="Actualité 1">
+            <div class="card-content">
+              <h3>Titre</h3>
+              <p>Description</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <a href="#" class="carousel-card card-more">
+            <span class="card-more-title">Voir toutes les actualités</span>
+            <span class="btn">Call to action</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="planning scroll-title">
+    <h2 class="titre">
+      <span class="titre-track">
+        <span class="titre-item">PLANNING</span>
+        <span class="titre-item">PLANNING</span>
+        <span class="titre-item">PLANNING</span>
+      </span>
+    </h2>
+
+    <div class="carousel-planning">
+      <div class="carousel-container">
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <div class="card-content">
+              <div class="title-group">
+                <h3 class="title secondary">BABY</h3>
+                <h3 class="title">BABY</h3>
+                <h3 class="title secondary">BABY</h3>
+              </div>
+              <div class="planning-grid">
+                <div class="day">
+                  <span class="day-label">Lun</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mar</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mer</span>
+                  <span class="slot">17h–18h</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Jeu</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day day-full">
+                  <span class="day-label">Ven</span>
+                  <span class="slot">-</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <div class="card-content">
+              <div class="title-group">
+                <h3 class="title secondary">M7</h3>
+                <h3 class="title">M7</h3>
+                <h3 class="title secondary">M7</h3>
+              </div>
+              <div class="planning-grid">
+                <div class="day">
+                  <span class="day-label">Lun</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mar</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mer</span>
+                  <span class="slot">16h–17h30</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Jeu</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day day-full">
+                  <span class="day-label">Ven</span>
+                  <span class="slot">-</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <div class="card-content">
+              <div class="title-group">
+                <h3 class="title secondary">M9</h3>
+                <h3 class="title">M9</h3>
+                <h3 class="title secondary">M9</h3>
+              </div>
+              <div class="planning-grid">
+                <div class="day">
+                  <span class="day-label">Lun</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mar</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mer</span>
+                  <span class="slot">16h–17h30</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Jeu</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day day-full">
+                  <span class="day-label">Ven</span>
+                  <span class="slot">17h-19h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <div class="card-content">
+              <div class="title-group">
+                <h3 class="title secondary">M11</h3>
+                <h3 class="title">M11</h3>
+                <h3 class="title secondary">M11</h3>
+              </div>
+              <div class="planning-grid">
+                <div class="day">
+                  <span class="day-label">Lun</span>
+                  <span class="slot">17h-19h30</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mar</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mer</span>
+                  <span class="slot">14h–16h</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Jeu</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day day-full">
+                  <span class="day-label">Ven</span>
+                  <span class="slot">17h-19h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <div class="card-content">
+              <div class="title-group">
+                <h3 class="title secondary">M13</h3>
+                <h3 class="title">M13</h3>
+                <h3 class="title secondary">M13</h3>
+              </div>
+              <div class="planning-grid">
+                <div class="day">
+                  <span class="day-label">Lun</span>
+                  <span class="slot">17h-19h30</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mar</span>
+                  <span class="slot">17h-20h30</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mer</span>
+                  <span class="slot">14h–16h</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Jeu</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day day-full">
+                  <span class="day-label">Ven</span>
+                  <span class="slot">17h-19h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <div class="card-content">
+              <div class="title-group">
+                <h3 class="title secondary">M15</h3>
+                <h3 class="title">M15</h3>
+                <h3 class="title secondary">M15</h3>
+              </div>
+              <div class="planning-grid">
+                <div class="day">
+                  <span class="day-label">Lun</span>
+                  <span class="slot">17h-19h30</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mar</span>
+                  <span class="slot">17h-20h30</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mer</span>
+                  <span class="slot">14h–16h</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Jeu</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day day-full">
+                  <span class="day-label">Ven</span>
+                  <span class="slot">17h-19h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <div class="card-content">
+              <div class="title-group">
+                <h3 class="title secondary">M17</h3>
+                <h3 class="title">M17</h3>
+                <h3 class="title secondary">M17</h3>
+              </div>
+              <div class="planning-grid">
+                <div class="day">
+                  <span class="day-label">Lun</span>
+                  <span class="slot">17h-19h30</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mar</span>
+                  <span class="slot">17h-20h30</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mer</span>
+                  <span class="slot">14h–16h</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Jeu</span>
+                  <span class="slot">18h-19h30</span>
+                </div>
+                <div class="day day-full">
+                  <span class="day-label">Ven</span>
+                  <span class="slot">17h-19h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <div class="card-content">
+              <div class="title-group">
+                <h3 class="title secondary">M20</h3>
+                <h3 class="title">M20</h3>
+                <h3 class="title secondary">M20</h3>
+              </div>
+              <div class="planning-grid">
+                <div class="day">
+                  <span class="day-label">Lun</span>
+                  <span class="slot">17h-19h30</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mar</span>
+                  <span class="slot">17h-20h30</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mer</span>
+                  <span class="slot">14h–16h</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Jeu</span>
+                  <span class="slot">18h-19h30</span>
+                </div>
+                <div class="day day-full">
+                  <span class="day-label">Ven</span>
+                  <span class="slot">17h-19h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <div class="carousel-card">
+            <div class="card-content">
+              <div class="title-group">
+                <h3 class="title">ADULTES</h3>
+              </div>
+              <div class="planning-grid">
+                <div class="day">
+                  <span class="day-label">Lun</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mar</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Mer</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day">
+                  <span class="day-label">Jeu</span>
+                  <span class="slot">-</span>
+                </div>
+                <div class="day day-full">
+                  <span class="day-label">Ven</span>
+                  <span class="slot">19h-21h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
 
-    <!-- 2x2 grid of numbers -->
-    <div class="chiffres-grid">
-      <article class="chiffre-card">
-        <p class="chiffre-number">104</p>
-        <p class="chiffre-text">
-          D’existence<br>
-          Dont 52 pour la section sabre
-        </p>
-      </article>
+    <div class="planning-actions">
+      <a href="#" class="planning-btn primary">Voir le planning</a>
+      <a href="#" class="planning-btn secondary">Envie de s'inscrire ?</a>
+    </div>
+  </section>
 
-      <article class="chiffre-card">
-        <p class="chiffre-number">32</p>
-        <p class="chiffre-text">
-          Médailles<br>
-          Dont 11 en or
-        </p>
-      </article>
+  <section class="section-calendrier">
+    <div class="calendrier-inner">
+      <div class="cal-main">
+        <div class="cal-month">
+          <p class="cal-month-label">DEC. 2025</p>
 
-      <article class="chiffre-card">
-        <p class="chiffre-number">201</p>
-        <p class="chiffre-text">
-          Titres de<br>
-          Champion de France
-        </p>
-      </article>
+          <article class="cal-card">
+            <div class="cal-card-info">
+              <h3>Championnat de France</h3>
+              <p class="cal-card-date">01/02/26</p>
+            </div>
+            <a href="#" class="cal-card-cta">
+              <span>Bientôt</span>
+              <span class="cal-card-arrow">›</span>
+            </a>
+          </article>
 
-      <article class="chiffre-card">
-        <p class="chiffre-number">150</p>
-        <p class="chiffre-text">
-          Licenciés<br>
-          Dont 10 de haut niveau
-        </p>
-      </article>
+          <article class="cal-card">
+            <div class="cal-card-info">
+              <h3>Championnat de France</h3>
+              <p class="cal-card-date">01/02/26</p>
+            </div>
+            <a href="#" class="cal-card-cta">
+              <span>Bientôt</span>
+              <span class="cal-card-arrow">›</span>
+            </a>
+          </article>
+        </div>
+
+        <div class="cal-month">
+          <p class="cal-month-label">JAN. 2026</p>
+
+          <article class="cal-card">
+            <div class="cal-card-info">
+              <h3>Championnat de France</h3>
+              <p class="cal-card-date">01/02/26</p>
+            </div>
+            <a href="#" class="cal-card-cta">
+              <span>Bientôt</span>
+              <span class="cal-card-arrow">›</span>
+            </a>
+          </article>
+
+          <article class="cal-card">
+            <div class="cal-card-info">
+              <h3>Championnat de France</h3>
+              <p class="cal-card-date">01/02/26</p>
+            </div>
+            <a href="#" class="cal-card-cta">
+              <span>Bientôt</span>
+              <span class="cal-card-arrow">›</span>
+            </a>
+          </article>
+        </div>
+
+        <a href="#" class="cal-big-cta">
+          <span>LE CALENDRIER</span>
+        </a>
+      </div>
+
+      <div class="cal-side-title">
+        <span>CALENDRIER</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-chiffres">
+    <div class="chiffres-bg" aria-hidden="true">
+      <span>LE CLUB</span>
+      <span>LE CLUB</span>
+      <span>LE CLUB</span>
+      <span>LE CLUB</span>
+      <span>LE CLUB</span>
+      <span>LE CLUB</span>
+      <span>LE CLUB</span>
+      <span>LE CLUB</span>
+      <span>LE CLUB</span>
+      <span>LE CLUB</span>
+      <span>LE CLUB</span>
+      <span>LE CLUB</span>
     </div>
 
-    <!-- bottom button -->
-    <a href="#" class="chiffres-cta">
-      Découvrir notre histoire
-    </a>
-  </div>
-</section>
+    <div class="chiffres-inner">
+      <h2 class="chiffres-title">
+        Le club en<br>quelques chiffres
+      </h2>
 
+      <div class="chiffres-logo">
+        <img src="./assets/imgs/logo_photo.png" alt="">
+      </div>
 
-<!-- Footer -->
+      <div class="chiffres-grid">
+        <article class="chiffre-card">
+          <p class="chiffre-number">104</p>
+          <p class="chiffre-text">
+            D’existence<br>
+            Dont 52 pour la section sabre
+          </p>
+        </article>
 
- <footer>
-    <!-- Réseaux sociaux -->
+        <article class="chiffre-card">
+          <p class="chiffre-number">32</p>
+          <p class="chiffre-text">
+            Médailles<br>
+            Dont 11 en or
+          </p>
+        </article>
+
+        <article class="chiffre-card">
+          <p class="chiffre-number">201</p>
+          <p class="chiffre-text">
+            Titres de<br>
+            Champion de France
+          </p>
+        </article>
+
+        <article class="chiffre-card">
+          <p class="chiffre-number">150</p>
+          <p class="chiffre-text">
+            Licenciés<br>
+            Dont 10 de haut niveau
+          </p>
+        </article>
+      </div>
+
+      <a href="#" class="chiffres-cta">
+        Découvrir notre histoire
+      </a>
+    </div>
+  </section>
+
+  <footer>
     <div class="reseaux-sociaux">
       <a href="#"><img src="#" alt="Facebook"></a>
       <a href="#"><img src="#" alt="Instagram"></a>
@@ -624,9 +589,7 @@
       <a href="#"><img src="#" alt="YouTube"></a>
     </div>
 
-    <!-- Menus déroulants -->
     <div class="footer-menus">
-
       <details>
         <summary>Mentions légales & Confidentialité</summary>
         <ul>
@@ -654,60 +617,24 @@
 
       <details>
         <summary>Nous retrouver</summary>
-        <p>Amicale Tarbaise d’Escrime<br>
-           4 Rue André Breuer<br>
-           65000 Tarbes</p>
-        <iframe 
+        <p>
+          Amicale Tarbaise d’Escrime<br>
+          4 Rue André Breuer<br>
+          65000 Tarbes
+        </p>
+        <iframe
           src="https://www.google.com/maps?q=Amicale+Tarbaise+d'Escrime,+Tarbes&output=embed"
           width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy">
         </iframe>
       </details>
     </div>
 
-    <!-- Logo -->
     <div class="footer-logo">
       <p><strong>AMICALE<br>TARBAISE<br>D’ESCRIME</strong></p>
     </div>
   </footer>
 
-
+  <script src="./assets/js/menu.js"></script>
+  <script src="./assets/js/title_slide.js"></script>
 </body>
-<script src="menu.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // grab ALL scrolling title tracks
-    const tracks = Array.from(document.querySelectorAll('.scroll-title .titre-track'));
-    if (!tracks.length) return;
-
-    const factor = 0.4; // speed: horizontal per vertical scroll
-    const widths = new Map();
-
-    function recalc() {
-      tracks.forEach(track => {
-        widths.set(track, track.scrollWidth);
-      });
-    }
-
-    function onScroll() {
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-
-      tracks.forEach(track => {
-        const trackWidth = widths.get(track) || track.scrollWidth || 1;
-        const x = (scrollY * factor) % trackWidth;
-        track.style.transform = `translateX(${-x}px)`;
-      });
-    }
-
-    recalc();
-    onScroll();
-
-    window.addEventListener('resize', () => {
-      recalc();
-      onScroll();
-    });
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-  });
-</script>
-
 </html>
